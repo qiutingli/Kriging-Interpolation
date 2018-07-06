@@ -1,0 +1,63 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "插值本质是在离散数据基础上补插连续函数，使得这条曲线通过全部给定的离散数据点。插值是离散函数逼近的重要方法，利用它可通过函数在有限个点处的取值状况，估算出函数在其他点出的近似值。\n",
+    "\n",
+    " 最直观的方法是找到已知点和预测点数值之间的关系，从而预测出预测点的数值。克里金插值不仅考虑了已知点和预测点的距离关系，还考虑了这些已知点之间的自相关关系。\n",
+    "\n",
+    "衡量已知点的自相关关系：半变异函数。 $z^*(x_0) = \\sum_{i=1}^{n}\\lambda_{i}z(x_i)$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "无偏性和预计方差最小是$\\lambda_i$的选取标准。\n",
+    "\n",
+    "无偏性： $E[z(x_0)-z^*(x_0)] = 0$ ---> $\\sum_{i=1}^{n}\\lambda_i = 1$\n",
+    "\n",
+    "方差最小：$min Var[z(x_0)-z^*(x_0)]$ ---> $\\sum_{i=1}^{n}\\bar{C}(x_i-x_j)\\lambda_i-\\mu = \\bar{C}(x_0-x_j)$, $(j=1...n)$ "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "变异函数，半变异函数。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
